@@ -1,5 +1,5 @@
 <h1 align=center>
-    AdventJS Codign Challenges
+    AdventJS Coding Challenges
 </h1>
 
 <div align=center>
@@ -13,7 +13,7 @@ This repository contains my solutions for the challenges of <a href="https://adv
 
 ## Challenges 2024
 <!-- <details>
-    <summary>Reto #1: 🧙‍♀️ Create the perfect potion</summary>
+    <summary>Challenge #1: 🧙‍♀️ Create the perfect potion</summary>
     <br />
     <img src="https://raw.githubusercontent.com/vmartinez33/halloween.dev/refs/heads/main/2024/Reto1.png" />
     <br /><br />
