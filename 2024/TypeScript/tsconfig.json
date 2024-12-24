@@ -1,6 +1,7 @@
 {
     "compilerOptions": {
         "target": "es6",
+        "lib": ["ES6", "ES2023", "DOM"],
         "module": "commonjs",
         "strict": true,
         "esModuleInterop": true,
