@@ -1,6 +1,7 @@
 from typing import List
 
 def create_frame(names: List[str]) -> str:
+    # largest_name = max (names, key=len) if names else ""
     largest_name = ""
     for name in names:
         if len(name) > len(largest_name):
