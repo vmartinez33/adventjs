@@ -9,19 +9,13 @@ def calculate_price(ornaments: str) -> int:
     }
     
     price = 0
-    for i in range(len(ornaments)):
-        ornament = ornaments[i]
-        next_ornament = ornaments[i+1] if i < (len(ornaments) - 1) else None
-        
+    last_value = 0
+    for ornament in ornaments:
         value = values.get(ornament, None)
-        next_value = values.get(next_ornament, None)
-        
-        if not value or (next_ornament and not next_value): return
-        
-        if next_value and value < next_value:
-            price -= value
-        else:
-            price += value
+        if value is None:
+            return 'undefined'
+        price += value - 2 * last_value if value > last_value else value
+        last_value = value
     
     return price
 

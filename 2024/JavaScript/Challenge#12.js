@@ -12,20 +12,12 @@ function calculatePrice(ornaments) {
     ]);
 
     let price = 0;
-    for (let i = 0; i < ornaments.length; i++) {
-        const ornament = ornaments[i];
-        const next_ornament = i < ornaments.length - 1 ? ornaments[i + 1] : null;
-
+    let lastValue = 0;
+    for (let ornament of ornaments) {
         const value = values.get(ornament);
-        const next_value = next_ornament ? values.get(next_ornament) : null;
-        
-        if (!value || (next_ornament && !next_value)) return undefined;
-
-        if (next_value && value < next_value) {
-            price -= value;
-        } else {
-            price += value;
-        }
+        if (value === undefined) return undefined
+        price += value > lastValue ? value - 2 * lastValue : value;
+        lastValue = value;
     }
 
     return price;
